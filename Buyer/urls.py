@@ -1,5 +1,5 @@
 from django.urls import path,re_path
-from Seller.views import *
+from Buyer.views import *
 
 urlpatterns=[
     path('index/',index),
