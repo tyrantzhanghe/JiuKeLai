@@ -69,8 +69,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="mega-dropdown-menu">
 						<div class="w3ls_vegetables">
 							<ul class="dropdown-menu drp-mnu">
-								<li><a href="login.html">登录</a></li>
-								<li><a href="login.html">注册</a></li>
+                                {% if request.COOKIES.username %}
+                                    <li>欢迎|{{ request.COOKIES.username }}</li>
+                                    <li><a href="/Buyer/logout"><u>退出</u></a></li>
+                                {% else %}
+                                    <li><a href="/Buyer/login">登录</a></li>
+                                    <li><a href="/Buyer/login">注册</a></li>
+                                {% endif %}
 							</ul>
 						</div>
 					</div>
